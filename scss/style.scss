@@ -90,8 +90,8 @@ footer a:link, footer a:visited {
 .sidebar .wrapper { 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	
-	width: 100%; 
+	grid-template-rows: 1fr 1fr;
+	width: 130px; 
 
 	}
 .sidebar h3.select { 
@@ -119,70 +119,26 @@ footer a:link, footer a:visited {
 	}
 
 
-	.sidebar a {
-		text-decoration: none;
+.extra1 {
+
 	}
 
 	.design-selection {
-		grid-row: 2;
+		grid-row: 1/3;
 		grid-column: 1;
-		padding: .5em;
-
-		ul {			
-			list-style-type: none;
-			padding: 0;
-		}
-
-		ul li {
-			margin: 1em .5em;
-		}
+		width: 45%;
 	}
-	
+
 	.design-archives {
 		grid-row: 1;
-		grid-column: 1/3;
-		width: 100%;		
-	
-		.archives {
-			display: none;
-		}
-	
-		nav {
-			background-color: black;
-			width: 100%;
-		
-			ul {
-				display:flex;
-				flex-direction: row-reverse;
-				justify-content: space-between;
-				padding: 10px;
-				text-decoration: underline;
-
-				li {
-					list-style-type: none;			
-				}
-			}
-		}
-	}
-
-	.design-archives a{
-		color: white;
-		text-transform: uppercase;
+		grid-column: 2;
+		width: 45%;
 	}
 
 	.zen-resources {
-		grid-row: 2;
+		grid-row:2;
 		grid-column: 2;
-		padding: .5em;
-
-		ul {			
-			list-style-type: none;
-			padding: 0;
-			
-			li {
-				margin: 1em .5em;
-			}
-		}		
+		width: 45%;
 	}
 
 
@@ -196,6 +152,20 @@ footer a:link, footer a:visited {
 		.intro { 
 			grid-row:1;
 			grid-column: 1/3;
+			display: grid;
+			grid-template-columns: 300px auto;
+		}
+		header{
+			grid-column: 1/-1;
+			//temporary border for visualizing layout
+			border: solid 1px #999;
+		}
+		.summary {	
+			grid-column: 2/3;
+		}
+			
+		.preamble {
+			grid-column: 2/3;
 		}
 		
 		.main {
@@ -206,38 +176,25 @@ footer a:link, footer a:visited {
 		.sidebar{
 			grid-row: 2;
 			grid-column: 1;
-			width: 300px; 			
-			 
-			.wrapper { 
-				display: grid;
-				grid-template-columns: 1fr;			
-			}
 		}
 
-		.design-selection {
-			grid-row: 2;
-		}
-	
-		.design-archives {
-			grid-row: 1;				
-			grid-column: 1;
-			nav {
-				background-color: black;
-				width: 100%;
-			
-				ul {
-					display:flex;
-					flex-direction: column-reverse;						
-				}
-				li {
-					margin: 0;
-					padding: .25em .5em;
-				}
+		.sidebar .wrapper { 
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 300px; 			
 			}
-		}
+
+			.design-selection {
+				grid-row: 1;
+			}
 		
-		.zen-resources {
-			grid-row: 3;				
-			grid-column: 1;
-		}
+			.design-archives {
+				grid-row: 2;				
+				grid-column: 1;
+			}
+		
+			.zen-resources {
+				grid-row:3;				
+				grid-column: 1;
+			}
 	}
