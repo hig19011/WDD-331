@@ -226,7 +226,12 @@ footer a:link, footer a:visited {
 	.main div:nth-child(even), .preamble {
 		background-color:white;
 	}
-		
+	
+	.main .supporting {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.requirements p:last-of-type {
 		font-weight: bold;
 	}
