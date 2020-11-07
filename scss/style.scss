@@ -210,6 +210,16 @@ footer a:link, footer a:visited {
 	.page-wrapper {
 		//max-width: 960px;
 	}
+
+	.summary, .preamble, .main.supporting {
+		margin-left: 1em;
+		width: 70%
+	}
+
+	.summary {
+		margin-top: 1em;
+	}
+
 	.main div, .summary, .preamble {
 		padding: 0em;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);		
@@ -227,10 +237,10 @@ footer a:link, footer a:visited {
 	}
 		
 	.main div:nth-child(even), .preamble {
-		background-color:white;
+		background-color: white;
 	}
 	
-	.main .supporting {
+	.main.supporting {
 		display: flex;
 		flex-direction: column;
 	}
