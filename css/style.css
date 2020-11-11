@@ -144,7 +144,7 @@ header {
   margin: 1em .5em;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 700px) {
   .page-wrapper {
     -ms-grid-columns: 20em 3fr 20em;
         grid-template-columns: 20em 3fr 20em;
