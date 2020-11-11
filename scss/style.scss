@@ -65,6 +65,11 @@ abbr {}
 	padding: 1.5em .5em .5em;	
 }
 
+.main div p,
+.summary p,
+.preamble p {
+	padding: .5em;
+}
 
 .main div:nth-child(even),
 .preamble {

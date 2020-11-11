@@ -38,6 +38,12 @@ p {
   padding: 1.5em 0.5em 0.5em;
 }
 
+.main div p,
+.summary p,
+.preamble p {
+  padding: 0.5em;
+}
+
 .main div:nth-child(even),
 .preamble {
   background-color: #bbb8b8;
