@@ -58,6 +58,10 @@ p {
   background-color: #5d8378;
 }
 
+header h1 {
+  color: white;
+}
+
 header {
   text-align: center;
 }
