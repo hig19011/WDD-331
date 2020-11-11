@@ -56,10 +56,18 @@ p {
 
 .intro header {
   background-color: #5d8378;
+  padding: 2rem;
 }
 
 header h1 {
   color: white;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1rem;
+  margin: 0;
 }
 
 header {
@@ -195,6 +203,14 @@ header {
     transform: translateX(calc(-20em - 1em));
     width: calc(100vw - 1em + 2px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
   }
 
   .summary {
