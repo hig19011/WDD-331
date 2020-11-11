@@ -33,6 +33,7 @@ p {
 .preamble h3 {
   font-weight: bold;
   text-transform: uppercase;
+  background-color: #9eb78f;
 }
 
 .main div:nth-child(even),
@@ -40,10 +41,13 @@ p {
   background-color: #bbb8b8;
 }
 
+.main {
+  background-color: #f4f5f5;
+}
+
 .requirements p:last-of-type {
   padding: 1em;
   font-weight: bold;
-  background-color: white;
 }
 
 .page-wrapper {
@@ -51,6 +55,10 @@ p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+}
+
+.intro header {
+  background-color: #5d8378;
 }
 
 header {
@@ -62,10 +70,13 @@ header {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  background-color: #202526;
+  color: #9e6848;
 }
 
 .sidebar a {
   text-decoration: none;
+  color: #9e6848;
 }
 
 .design-selection {
@@ -170,7 +181,6 @@ header {
   .main div h3,
   .summary h3,
   .preamble h3 {
-    background-color: grey;
     padding: 1.5em .5em .5em;
     -webkit-margin-before: 0em;
             margin-block-start: 0em;
@@ -212,7 +222,7 @@ header {
     background-color: lightblue;
     -webkit-transform: translateX(calc(-20em - 1em));
             transform: translateX(calc(-20em - 1em));
-    width: calc(100vw - 1em - 2px);
+    width: calc(100vw - 1em + 2px);
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }

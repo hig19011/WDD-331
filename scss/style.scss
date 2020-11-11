@@ -7,6 +7,12 @@
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
+$blue-green: #5d8378;
+$nearly-black: #202526;
+$orange: #9e6848;
+$green: #9eb78f;
+$whitish: #f4f5f5;
+
 $sidebar-width: 20em;
 
 /* basic elements */
@@ -51,6 +57,7 @@ abbr {}
 .preamble h3 {
 	font-weight: bold;
 	text-transform: uppercase;
+	background-color: $green;	
 }
 
 .main div:nth-child(even),
@@ -58,10 +65,14 @@ abbr {}
 	background-color: rgb(187, 184, 184);
 }
 
+.main {
+	background-color: $whitish;
+}
+
 .requirements p:last-of-type {
 	padding: 1em;
 	font-weight: bold;
-	background-color: white;
+	//background-color: white;
 }
 
 .page-wrapper {
@@ -70,6 +81,10 @@ abbr {}
 }
 
 .intro {}
+
+.intro header {
+	background-color: $blue-green;
+}
 
 header h1 {}
 
@@ -97,7 +112,8 @@ footer a:visited {}
 .sidebar .wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-
+	background-color: $nearly-black;
+	color: $orange;
 }
 
 .sidebar h3.select {}
@@ -118,6 +134,7 @@ footer a:visited {}
 
 .sidebar a {
 	text-decoration: none;
+	color: $orange
 }
 
 .design-selection {
@@ -211,7 +228,6 @@ footer a:visited {}
 	.main div h3,
 	.summary h3,
 	.preamble h3 {
-		background-color: grey;
 		padding: 1.5em .5em .5em;
 		margin-block-start: 0em;
 		margin-block-end: 0em;
@@ -249,9 +265,8 @@ footer a:visited {}
 		background-color: lightblue;
 		
 		transform: translateX(calc(-#{$sidebar-width} - 1em));
-		width: calc(100vw - 1em - 2px);
+		width: calc(100vw - 1em + 2px);
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 	}
 
 	.summary {
