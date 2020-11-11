@@ -21,10 +21,12 @@ p {
 }
 
 /* specific divs */
-.main div,
-.summary,
-.preamble {
+.summary {
   padding: 1em;
+}
+
+.main div h3 {
+  margin-top: 0;
 }
 
 .main div h3,

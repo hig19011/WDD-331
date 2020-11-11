@@ -46,12 +46,16 @@ abbr {}
 
 
 /* specific divs */
-.main div,
-.summary,
-.preamble {
+// .main div,
+.summary
+// ,
+// .preamble
+ {
 	padding: 1em;
 }
-
+.main div h3{
+	margin-top: 0;
+}
 .main div h3,
 .summary h3,
 .preamble h3 {
