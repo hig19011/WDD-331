@@ -322,6 +322,16 @@ footer a:visited {}
 	}
 
 	.sidebar {
+		//We can remove this portion if we decide it doesn't work. I think it looks good,
+		//but it would look better if we could find a way for the aside to also be able to
+		//scroll independently. 
+		position: -webkit-sticky; /* Safari */
+  		position: sticky;
+		top: 0;
+		//Note: not supported by Internet Explorer, Edge 15, and
+		 //earlier versions 
+		 //end of sticky footer
+		
 		margin-top: 11em;
 		grid-row: 1;
 		grid-column: 1;

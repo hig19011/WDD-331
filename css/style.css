@@ -248,6 +248,10 @@ footer a:visited {
   }
 
   .sidebar {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
     margin-top: 11em;
     grid-row: 1;
     grid-column: 1;
