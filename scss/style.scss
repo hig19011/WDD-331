@@ -135,14 +135,14 @@ footer a:visited {}
 	color: $orange;
 }
 
-.sidebar h3.select {}
+.sidebar h3.select { margin: .5em 0 .5em 0;}
 
 .sidebar h3.archives {}
 
-.sidebar h3.resources {}
+.sidebar h3.resources { margin: .5em 0 .5em 0;}
 
 
-.sidebar ul {}
+.sidebar ul { margin: .5em 0 .5em 0}
 
 .sidebar li {}
 
@@ -151,10 +151,84 @@ footer a:visited {}
 .sidebar li a:visited {}
 
 
-.sidebar a {
-	text-decoration: none;
-	color: $orange
+.design-selection,
+.zen-resources {
+	ul{
+		border: 2px solid white;
+		border-radius: 4px;
+	}
+	li {
+		margin: 4px;			
+
+		// &:nth-child(4)::after,
+		// &:nth-child(5)::after,
+		// &:nth-child(6)::after,
+		// &:nth-child(7)::after {		
+		// 	background-image: url('../images/Arrow.svg');
+		// 	background-size: 10px 10px;
+		// 	// display: inline-block;
+		// 	margin: 5px;
+		// 	width: 10px; 
+		// 	height: 10px;
+		// 	content:"";
+		// 	float: right;
+		// }
+
+		
+		// &:nth-child(1)::after,
+		// &:nth-child(2)::after,
+		// &:nth-child(3)::after,
+		// &:nth-child(8)::after {			
+		// 	background-image: url('../images/Arrow.svg');
+		// 	background-size: 10px 10px;
+		// 	//display: inline;
+		// 	margin: 5px;
+		// 	width: 10px; 
+		// 	height: 10px;
+		// 	content:"";
+		// 	float: left;
+		// 	transform: rotate(180deg);
+		// }
+		
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: darken($whitish,25);
+			transition: all .3s;
+
+			// background-image: url("../images/wave.svg");
+			background-position: bottom;
+			background-repeat: repeat-x;
+			background-size: 1.5em;
+			border-bottom: 0;
+			padding-bottom: .3em;
+			text-decoration: none;
+		}
+
+		a:nth-child(2) {
+			font-size: small;
+			color: lighten($orange,25);
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: darken($whitish,50);
+			background-image: url("../images/wave-animate-reverse.svg");		
+		}
+
+		a:nth-child(2) {
+			font-size: small;
+			color: lighten($orange,25);
+		}
+
+		a:nth-child(2):hover {
+			font-size: small;
+			color: lighten($orange,50);
+			background-image: url("../images/wave-animate.svg");			
+		}
+	}		
 }
+
 
 .design-selection {
 	grid-row: 2;
@@ -341,8 +415,10 @@ footer a:visited {}
 		.wrapper {
 			display: grid;
 			grid-template-columns: 1fr;
-		}
+		} 
 	}
+
+	
 
 	.design-selection {
 		grid-row: 2;
