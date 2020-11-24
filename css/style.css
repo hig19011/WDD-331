@@ -83,9 +83,42 @@ header {
   text-align: center;
 }
 
-footer a:link,
-footer a:visited {
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+footer a {
   color: transparent;
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+
+footer a:first-child {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(2) {
+  background: url("../images/layer.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(3) {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(4) {
+  background: url("../images/layer.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:last-child {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
 }
 
 .sidebar .wrapper {
@@ -241,9 +274,9 @@ footer a:visited {
 
   footer {
     margin-top: 1em;
-    display: flex;
     justify-content: flex-end;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 0;
   }
 
   footer a:link,
