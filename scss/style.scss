@@ -124,7 +124,9 @@ header {
 footer {}
 
 footer a:link,
-footer a:visited {}
+footer a:visited {
+	color: transparent;
+}
 
 .sidebar {}
 
