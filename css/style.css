@@ -27,7 +27,7 @@ p {
 }
 
 .main div h3 {
-  margin-top: 0;
+  margin-top: -1rem;
 }
 
 .main div h3,
@@ -43,6 +43,12 @@ p {
 .summary p,
 .preamble p {
   padding: .5em;
+}
+
+.main div p:last-child,
+.summary p:last-child,
+.preamble p:last-child {
+  padding-bottom: 1.5rem;
 }
 
 .main div:nth-child(even),
@@ -84,6 +90,47 @@ header h2 {
 
 header {
   text-align: center;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  color: transparent;
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+
+footer a:first-child {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(2) {
+  background: url("../images/layer.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(3) {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:nth-child(4) {
+  background: url("../images/layer.svg");
+  background-repeat: no-repeat;
+}
+
+footer a:last-child {
+  background: url("../images/html-5-logo.svg");
+  background-repeat: no-repeat;
 }
 
 .sidebar .wrapper {
@@ -202,16 +249,39 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 0;
   padding: 10px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .design-archives nav ul li {
   list-style-type: none;
+  background: url("/images/sign.png");
+  background-repeat: no-repeat;
+  background-size: 14em 2em;
+  background-position: left;
+  margin-bottom: 10px;
+  padding-left: 1.5em;
+  padding-right: 6em;
+  padding-top: .5em;
+  padding: .5em 6em .3em 2em;
+}
+
+.design-archives nav ul li:nth-child(1) {
+  padding-left: 3em;
+  padding-right: 6em;
+}
+
+.design-archives nav ul a {
+  text-decoration: none;
+  color: brown;
+  text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+}
+
+.design-archives .indicator {
+  display: none;
 }
 
 .design-archives a {
@@ -328,18 +398,16 @@ header {
   }
   footer {
     margin-top: 1em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 0;
   }
   footer a:link,
   footer a:visited {
-    padding: .5 em;
+    padding: .5em;
     margin: 1em;
   }
   .sidebar {
@@ -347,6 +415,7 @@ header {
     /* Safari */
     position: sticky;
     top: 0;
+    height: 100vh;
     margin-top: 11em;
     -ms-grid-row: 1;
     grid-row: 1;

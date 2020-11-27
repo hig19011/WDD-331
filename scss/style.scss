@@ -44,7 +44,7 @@ a:active {}
 
 abbr {}
 
-
+ 
 /* specific divs */
 // .main div,
 .summary
@@ -54,7 +54,7 @@ abbr {}
 	padding: 1em;
 }
 .main div h3{
-	margin-top: 0;
+	margin-top: -1rem;
 }
 .main div h3,
 .summary h3,
@@ -69,6 +69,12 @@ abbr {}
 .summary p,
 .preamble p {
 	padding: .5em;
+}
+
+.main div p:last-child,
+.summary p:last-child,
+.preamble p:last-child {
+	padding-bottom: 1.5rem;
 }
 
 .main div:nth-child(even),
@@ -121,11 +127,43 @@ header {
 
 .supporting {}
 
-footer {}
-
+footer{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 1rem;
+}
+footer a{
+	color: transparent;
+	display: block;
+	height: 35px;
+	width: 35px;
+}
+ 
+	
 footer a:link,
-footer a:visited {}
-
+footer a:visited {
+}
+footer a:first-child{
+	background: url("../images/html-5-logo.svg");
+	background-repeat: no-repeat;
+	//Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+}
+footer a:nth-child(2){
+	background: url("../images/layer.svg");
+	background-repeat: no-repeat;
+}
+footer a:nth-child(3){
+	background: url("../images/html-5-logo.svg");
+	background-repeat: no-repeat;
+}
+footer a:nth-child(4){
+	background: url("../images/layer.svg");
+	background-repeat: no-repeat;
+}
+footer a:last-child{
+	background: url("../images/html-5-logo.svg");
+	background-repeat: no-repeat;;
+}
 .sidebar {}
 
 .sidebar .wrapper {
@@ -261,21 +299,69 @@ footer a:visited {}
 		ul {
 			display: flex;
 			flex-direction: row-reverse;
-			justify-content: space-between;
+			justify-content: space-around;
 			margin-top: 0;
 			padding: 10px;
-			text-decoration: underline;
+			text-decoration: none;
 
 			li {
 				list-style-type: none;
+				background: url("/images/sign.png");
+				background-repeat: no-repeat;
+				background-size: 14em 2em;
+				background-position: left;
+				margin-bottom: 10px;
+				padding-left: 1.5em;		
+				padding-right: 6em;
+				padding-top:.5em;
+				padding: .5em 6em .3em 2em;
+			}
+
+			li:nth-child(1) {
+				padding-left: 3em;		
+				padding-right: 6em;
+			}
+
+		  // &:first-child()
+			// {
+			// 	position: relative;
+			// 	overflow: hidden;	
+			// 	transform: rotate(180deg);
+			// }
+			// li::before
+			// {
+			// 	content: "";
+			// 	position: absolute;
+			// 	width: 200%;
+			// 	height: 200%;
+			// 	top: -50%;
+			// 	left: -50%;
+			// 	z-index: -1;
+			// 	background: url("/images/sign.png");
+			// 	background-repeat: no-repeat;
+			// 	transform: rotate(-180deg);	
+			// }
+
+				a{
+					text-decoration: none;				
+					color:brown;
+					
+					text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+
+				}
 			}
 		}
+		.indicator {
+			display: none;
+		}
 	}
-}
+
 
 .design-archives a {
 	color: white;
 	text-transform: uppercase;
+	
+	
 }
 
 .zen-resources {
@@ -370,7 +456,7 @@ footer a:visited {}
 		font-size: 1.2rem;
 	}
 
-	.summary {
+	.summary { 
 		grid-column: 1/3;
 	}
 
@@ -384,14 +470,14 @@ footer a:visited {}
 
 	footer {
 		margin-top: 1em;
-		display: flex;
 		justify-content: flex-end;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		padding-bottom: 0;
 	}
 
 	footer a:link,
 	footer a:visited {
-		padding: .5 em;
+		padding: .5em;
 		margin: 1em;
 	}
 
@@ -405,7 +491,7 @@ footer a:visited {}
 		//Note: not supported by Internet Explorer, Edge 15, and
 		 //earlier versions 
 		 //end of sticky footer
-		
+		height: 100vh;
 		margin-top: 11em;
 		grid-row: 1;
 		grid-column: 1;
@@ -417,7 +503,7 @@ footer a:visited {}
 			grid-template-columns: 1fr;
 		} 
 	}
-
+ 
 	
 
 	.design-selection {
