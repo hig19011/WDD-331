@@ -98,8 +98,8 @@ footer {
 footer a {
   color: transparent;
   display: block;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
 }
 
 footer a:first-child {
@@ -356,6 +356,11 @@ footer a:last-child {
     justify-content: flex-end;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-bottom: 0;
+  }
+
+  footer a {
+    height: 35px;
+    width: 35px;
   }
 
   footer a:link,
