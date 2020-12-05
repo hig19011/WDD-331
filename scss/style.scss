@@ -399,6 +399,10 @@ footer a:last-child{
 					text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
 					white-space: nowrap;
 					overflow: hidden;
+					//I think adding some letter spacing makes the words on the sign more accessible/easier to read. 
+					//If you agree the background image just need to be adjuste in size to fit the change
+					letter-spacing: 1.5px;
+
 				}
 			}
 		}
