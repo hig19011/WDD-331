@@ -220,9 +220,6 @@ p {
   }
 }
 
-.main {
-  background-color: #f4f5f5;
-}
 @media (min-width: 700px) {
   .main {
     padding-left: 1em;
