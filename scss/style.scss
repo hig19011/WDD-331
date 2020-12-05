@@ -6,14 +6,9 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import 'utilities';
+@import 'layout';
 
-$blue-green: #5d8378;
-$nearly-black: #202526;
-$orange: #9e6848;
-$green: #9eb78f;
-$whitish: #f4f5f5;
-
-$sidebar-width: 20em;
 
 /* basic elements */
 html {
@@ -312,7 +307,7 @@ footer a:last-child{
 
 			li {
 				list-style-type: none;
-				background: url("/images/sign.png");
+				background: url("../images/sign.png");
 				background-repeat: no-repeat;
 				background-size: 12em 2.5em;
 				background-position: center;
@@ -329,6 +324,7 @@ footer a:last-child{
 				grid-column: 1;
 				grid-row: 1;
 			}
+
 
 		  // &:first-child()
 			// {
@@ -417,7 +413,7 @@ footer a:last-child{
 	.main div h3,
 	.summary h3,
 	.preamble h3 {
-		// padding: 1.5em .5em .5em;
+		padding: 1.5em .5em .5em;
 		margin-block-start: 0em;
 		margin-block-end: 0em;
 	}

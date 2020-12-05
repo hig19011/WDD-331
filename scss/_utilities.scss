@@ -1,0 +1,25 @@
+
+// variables
+$blue-green: #5d8378;
+$nearly-black: #202526;
+$orange: #9e6848;
+$green: #9eb78f;
+$whitish: #f4f5f5;
+
+$sidebar-width: 20em;
+
+$break-medium: 500px;
+$break-large: 700px;
+
+
+// mixins
+@mixin breakpoint($break) {
+@if $break == medium {
+@media (min-width: $break-medium) { @content; }
+}
+@else if $break == large {
+@media (min-width: $break-large) { @content; }
+} @else {
+@media ($break) { @content; }
+}
+}    
