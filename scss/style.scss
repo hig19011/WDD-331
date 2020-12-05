@@ -43,11 +43,21 @@ abbr {}
 /* specific divs */
 // .main div,
 .summary
-// ,
-// .preamble
  {
 	padding: 1em;
+	@include breakpoint(large){
+		margin-top: 1em;
+	}
 }
+.main div, 
+.summary,
+.preamble{
+	@include breakpoint(large){
+		padding: 0em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+}
+
 .main div h3{
 	margin-top: -1rem;
 }
@@ -57,13 +67,21 @@ abbr {}
 	font-weight: bold;
 	text-transform: uppercase;
 	background-color: $green;
-	padding: 1.5em .5em .5em;	
+	padding: 1.5em .5em .5em;
+	@include breakpoint(large){
+		// padding: 1.5em .5em .5em;
+		margin-block-start: 0em;
+		margin-block-end: 0em;
+	}	
 }
 
 .main div p,
 .summary p,
 .preamble p {
 	padding: .5em;
+	@include breakpoint(large){
+		padding: 1.5em .5em .5em;
+	}
 }
 
 .main div p:last-child,
@@ -75,10 +93,18 @@ abbr {}
 .main div:nth-child(even),
 .preamble {
 	background-color: rgb(187, 184, 184);
+	@include breakpoint(large){
+		background-color: white;
+	}
 }
 
 .main {
 	background-color: $whitish;
+	@include breakpoint(large){
+	padding-left: 1em;
+	padding-right: 1em;
+	grid-column: 2/3;
+}
 }
 
 .requirements p:last-of-type {
@@ -87,26 +113,40 @@ abbr {}
 	//background-color: white;
 }
 
-.intro {}
+.intro{
+	@include breakpoint(large){
+		padding-left: 1em;
+		padding-right: 1em;
+		grid-column: 2/3;
+	}
+}
 
 .intro header {
 	background-color: $blue-green;
 	padding: 2rem;
+	text-align: center;
+	@include breakpoint(large){	
+		transform: translateX(calc(-#{$sidebar-width} - 1em));
+		width: calc(100vw - 1em + 2px);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+	}
 }
 
 header h1 {
 	color: white;
 	font-size: 2.2rem;
 	margin: 0;
+	@include breakpoint(large){
+		font-size: 2.5rem;
+	}
 }
 
 header h2 {
 	font-size: 1rem;
 	margin: 0;
-}
-
-header {
-	text-align: center;
+	@include breakpoint(large){
+		font-size: 1.2rem;
+	}
 }
 
 .summary {}
@@ -119,6 +159,11 @@ header {
 
 footer{
 	padding-bottom: 1rem;
+	@include breakpoint(large){
+		margin-top: 1em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		padding-bottom: 0;
+	}
 }
 footer a{
 	color: transparent;
@@ -128,6 +173,10 @@ footer a{
 	opacity: 95%;
 	transition: 0.5s opacity;
 	transition: 0.25s transform;
+	@include breakpoint(large){
+		height: 35px;
+		width: 35px
+	}
 }
 
 footer a:hover{
@@ -137,6 +186,10 @@ footer a:hover{
 	
 footer a:link,
 footer a:visited {
+	@include breakpoint(large){
+		padding: .5em;
+		margin: 1em;
+	}
 }
 footer a:first-child{
 	background: url("../images/compassHTML.svg");
@@ -159,7 +212,21 @@ footer a:last-child{
 	background: url("../images/compassGH.svg");
 	background-repeat: no-repeat;;
 }
-.sidebar {}
+.sidebar {
+	@include breakpoint(large){
+		position: -webkit-sticky; /* Safari */
+  		position: sticky;
+		top: 0;
+		//Note: not supported by Internet Explorer, Edge 15, and
+		 //earlier versions 
+		 //end of sticky footer
+		// height: 100vh;
+		margin-top: 11em;
+		width: 20em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	}
+}
 
 .sidebar .wrapper {
 	background-color: $nearly-black;
@@ -278,6 +345,9 @@ footer a:last-child{
 	text-align: center;
 	.archives {
 		display: none;
+		@include breakpoint(large){
+			margin-top: 0;
+		}
 	}
 
 	nav {
@@ -297,6 +367,9 @@ footer a:last-child{
 				background-position: center;
 				margin-bottom: 10px;
 				padding: .5em .5em .5em 1em;
+				@include breakpoint(large){
+					padding: .25em .5em;
+				}
 			}
 
 		  // &:first-child()
@@ -348,124 +421,6 @@ footer a:last-child{
 
 		li {
 			margin: 1em .5em;
-		}
-	}
-}
-
-
-
-@media screen and (min-width:700px) {
-
-	.summary {
-		margin-top: 1em;
-	}
-
-	.intro,
-	.main {
-		padding-left: 1em;
-		padding-right: 1em;
-		grid-column: 2/3;
-	}
-
-	.main div,
-	.summary,
-	.preamble {
-		padding: 0em;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	}
-
-	.main div h3,
-	.summary h3,
-	.preamble h3 {
-		// padding: 1.5em .5em .5em;
-		margin-block-start: 0em;
-		margin-block-end: 0em;
-	}
-
-	.main div p,
-	.summary p,
-	.preamble p {
-		padding: 1.5em .5em .5em;
-	}
-
-	.main div:nth-child(even),
-	.preamble {
-		background-color: white;
-	}
-
-	.requirements p:last-of-type {
-		font-weight: bold;
-	}
-
-
-	header {
-		background-color: lightblue;
-		
-		transform: translateX(calc(-#{$sidebar-width} - 1em));
-		width: calc(100vw - 1em + 2px);
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	}
-	header h1 {
-	font-size: 2.5rem;
-}
-
-	header h2 {
-		font-size: 1.2rem;
-	}
-
-	footer {
-		margin-top: 1em;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		padding-bottom: 0;
-	}
-
-	footer a{
-		height: 35px;
-		width: 35px;
-	}
-
-	footer a:link,
-	footer a:visited {
-		padding: .5em;
-		margin: 1em;
-	}
-
-	.sidebar {
-		//We can remove this portion if we decide it doesn't work. I think it looks good,
-		//but it would look better if we could find a way for the aside to also be able to
-		//scroll independently. 
-		position: -webkit-sticky; /* Safari */
-  		position: sticky;
-		top: 0;
-		//Note: not supported by Internet Explorer, Edge 15, and
-		 //earlier versions 
-		 //end of sticky footer
-		height: 100vh;
-		margin-top: 11em;
-		width: 20em;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-	}
- 
-	
-
-	.design-selection {
-		grid-row: 2;
-	}
-
-	.design-archives {
-
-		.archives {
-			margin-top: 0;			
-		}
-
-		nav {
-			background-color: black;
-
-			li {
-				margin: 0;
-				padding: .25em .5em;
-			}
 		}
 	}
 }
