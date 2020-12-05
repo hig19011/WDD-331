@@ -257,43 +257,11 @@ footer a:last-child{
 	}
 	li {
 		margin: 4px;			
-
-		// &:nth-child(4)::after,
-		// &:nth-child(5)::after,
-		// &:nth-child(6)::after,
-		// &:nth-child(7)::after {		
-		// 	background-image: url('../images/Arrow.svg');
-		// 	background-size: 10px 10px;
-		// 	// display: inline-block;
-		// 	margin: 5px;
-		// 	width: 10px; 
-		// 	height: 10px;
-		// 	content:"";
-		// 	float: right;
-		// }
-
-		
-		// &:nth-child(1)::after,
-		// &:nth-child(2)::after,
-		// &:nth-child(3)::after,
-		// &:nth-child(8)::after {			
-		// 	background-image: url('../images/Arrow.svg');
-		// 	background-size: 10px 10px;
-		// 	//display: inline;
-		// 	margin: 5px;
-		// 	width: 10px; 
-		// 	height: 10px;
-		// 	content:"";
-		// 	float: left;
-		// 	transform: rotate(180deg);
-		// }
 		
 		a {
 			text-decoration: none;
 			color: darken($whitish,25);
 			transition: all .3s;
-
-			// background-image: url("../images/wave.svg");
 			background-position: bottom;
 			background-repeat: repeat-x;
 			background-size: 1.5em;
@@ -363,37 +331,18 @@ footer a:last-child{
 				list-style-type: none;
 				background: url("../images/sign.png");
 				background-repeat: no-repeat;
-				background-size: 12em 2.5em;
+				background-size: 12.5em 2.5em;
 				background-position: center;
 				margin-bottom: 10px;
-				padding: .5em .5em .5em 1em;
+				padding: .5em .5em .5em .5em;
 				@include breakpoint(large){
 					padding: .25em .5em;
 				}
 			}
 
-		  // &:first-child()
-			// {
-			// 	position: relative;
-			// 	overflow: hidden;	
-			// 	transform: rotate(180deg);
-			// }
-			// li::before
-			// {
-			// 	content: "";
-			// 	position: absolute;
-			// 	width: 200%;
-			// 	height: 200%;
-			// 	top: -50%;
-			// 	left: -50%;
-			// 	z-index: -1;
-			// 	background: url("/images/sign.png");
-			// 	background-repeat: no-repeat;
-			// 	transform: rotate(-180deg);	
-			// }
-
 				a{
-					text-decoration: none;				
+					text-decoration: none;		
+					vertical-align: middle;		
 					color:brown;
 					
 					text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
