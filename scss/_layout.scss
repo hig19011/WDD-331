@@ -2,18 +2,22 @@
 	display: grid;
     grid-template-columns: 1fr;
     @include breakpoint(large){
-        grid-template-columns: $sidebar-width 3fr $sidebar-width;
+        grid-template-columns: $sidebar-width fit-content(50%) 1fr;
     }
 }
 
-main{
+.main, .supporting, .preamble {
+    overflow: hidden;
+}
+
+.main{
     @include breakpoint(large){
         grid-row: 2;
         grid-column: 2/3;
     }
 }
 
-main.supporting{
+.main.supporting{
     @include breakpoint(large){
         display: flex;
 		flex-direction: column;

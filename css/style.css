@@ -13,13 +13,17 @@
 
 @media (min-width: 700px) {
   .page-wrapper {
-    -ms-grid-columns: 20em 3fr 20em;
-        grid-template-columns: 20em 3fr 20em;
+    -ms-grid-columns: 20em fit-content(50%) 1fr;
+        grid-template-columns: 20em fit-content(50%) 1fr;
   }
 }
 
+.main, .supporting, .preamble {
+  overflow: hidden;
+}
+
 @media (min-width: 700px) {
-  main {
+  .main {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 2;
@@ -29,7 +33,7 @@
 }
 
 @media (min-width: 700px) {
-  main.supporting {
+  .main.supporting {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,7 +330,9 @@ p {
   .intro header {
     -webkit-transform: translateX(calc(-20em - 1em));
             transform: translateX(calc(-20em - 1em));
-    width: calc(100vw - 1em + 2px);
+    width: 100vw;
+    width: calc(100vw - 81px);
+    max-width: 100vw !important;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -428,11 +434,15 @@ footer a:last-child {
   background-repeat: no-repeat;
 }
 
+.sidebar abbr {
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: lighten;
+}
+
 @media (min-width: 700px) {
   .sidebar {
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
     top: 0;
     margin-top: 11em;
     width: 20em;
@@ -481,6 +491,7 @@ footer a:last-child {
   border-bottom: 0;
   padding-bottom: .3em;
   text-decoration: none;
+  background-image: none;
 }
 
 .design-selection li a:nth-child(2),
@@ -490,7 +501,9 @@ footer a:last-child {
 }
 
 .design-selection li a:hover,
-.zen-resources li a:hover {
+.design-selection li a:active,
+.zen-resources li a:hover,
+.zen-resources li a:active {
   text-decoration: none;
   color: #6f7b7b;
   background-image: url("../images/wave-animate-reverse.svg");
@@ -503,7 +516,9 @@ footer a:last-child {
 }
 
 .design-selection li a:nth-child(2):hover,
-.zen-resources li a:nth-child(2):hover {
+.design-selection li a:nth-child(2):active,
+.zen-resources li a:nth-child(2):hover,
+.zen-resources li a:nth-child(2):active {
   font-size: small;
   color: #f7f1ee;
   background-image: url("../images/wave-animate.svg");
@@ -556,6 +571,12 @@ footer a:last-child {
   background-position: center;
   margin-bottom: 10px;
   padding: .5em .5em .5em .5em;
+}
+
+@media (min-width: 500px) {
+  .design-archives nav ul li {
+    background-size: 15em 2.5em;
+  }
 }
 
 @media (min-width: 700px) {

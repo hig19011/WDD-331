@@ -127,7 +127,9 @@ abbr {}
 	text-align: center;
 	@include breakpoint(large){	
 		transform: translateX(calc(-#{$sidebar-width} - 1em));
-		width: calc(100vw - 1em + 2px);
+		width: 100vw;
+		width: calc(100vw - 81px);
+		max-width: 100vw!important;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
 	}
 }
@@ -213,9 +215,16 @@ footer a:last-child{
 	background-repeat: no-repeat;;
 }
 .sidebar {
+
+	abbr {
+		text-decoration: none;
+		font-weight: bolder;
+		letter-spacing: 1px;
+		color: lighten;
+	}
 	@include breakpoint(large){
-		position: -webkit-sticky; /* Safari */
-  		position: sticky;
+		// position: -webkit-sticky; /* Safari */
+  	// 	position: sticky;
 		top: 0;
 		//Note: not supported by Internet Explorer, Edge 15, and
 		 //earlier versions 
@@ -268,6 +277,7 @@ footer a:last-child{
 			border-bottom: 0;
 			padding-bottom: .3em;
 			text-decoration: none;
+			background-image: none;
 		}
 
 		a:nth-child(2) {
@@ -275,7 +285,8 @@ footer a:last-child{
 			color: lighten($orange,25);
 		}
 
-		a:hover {
+		a:hover,
+		a:active {
 			text-decoration: none;
 			color: darken($whitish,50);
 			background-image: url("../images/wave-animate-reverse.svg");		
@@ -286,10 +297,11 @@ footer a:last-child{
 			color: lighten($orange,25);
 		}
 
-		a:nth-child(2):hover {
+		a:nth-child(2):hover,
+		a:nth-child(2):active {
 			font-size: small;
 			color: lighten($orange,50);
-			background-image: url("../images/wave-animate.svg");			
+		background-image: url("../images/wave-animate.svg");			
 		}
 	}		
 }
@@ -335,6 +347,9 @@ footer a:last-child{
 				background-position: center;
 				margin-bottom: 10px;
 				padding: .5em .5em .5em .5em;
+				@include breakpoint(medium){
+					background-size: 15em 2.5em;
+				}
 				@include breakpoint(large){
 					padding: .25em .5em;
 				}
