@@ -353,7 +353,7 @@ footer a:visited {
 }
 
 footer a:first-child {
-  background: url("../images/compassHTML.svg");
+  background: url("../images/signHTML.svg");
   background-repeat: no-repeat;
 }
 
@@ -363,17 +363,17 @@ footer a:nth-child(2) {
 }
 
 footer a:nth-child(3) {
-  background: url("../images/compassCC.svg");
+  background: url("../images/treesCC.svg");
   background-repeat: no-repeat;
 }
 
 footer a:nth-child(4) {
-  background: url("../images/compassA11y.svg");
+  background: url("../images/mapA11y.svg");
   background-repeat: no-repeat;
 }
 
 footer a:last-child {
-  background: url("../images/compassGH.svg");
+  background: url("../images/hikerGH.svg");
   background-repeat: no-repeat;
 }
 
