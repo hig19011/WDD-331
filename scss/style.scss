@@ -34,15 +34,22 @@ p {
 
 h3 {}
 
-a:link {}
-
-a:visited {}
-
-a:hover,
-a:focus,
-a:active {}
-
-abbr {}
+[role=article] a:link {
+	color: #5d8378;
+  }
+  
+  [role=article] a:visited {
+	color: #9e6848;
+  }
+  
+  [role=article] a:hover {
+	color: #9eb78f;
+	font-weight: bold;
+  }
+  
+  abbr {
+	text-decoration: none;
+  }
 
  
 /* specific divs */
