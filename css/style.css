@@ -272,6 +272,7 @@ abbr {
 header {
   background-image: url("../images/Mountains.svg");
   background-color: white;
+  transition: 0.5s background-color;
 }
 @media (min-width: 830px) {
   header {

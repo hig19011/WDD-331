@@ -141,6 +141,7 @@ h3 {}
 header {
 	background-image: url("../images/Mountains.svg");
 	background-color: white;
+	transition: 0.5s background-color;
 	@include breakpoint(large){
 		background-image: none;
 		background-color: $blue-green;
