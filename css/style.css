@@ -180,10 +180,6 @@ p {
   }
 }
 
-.main div h3 {
-  margin-top: -1rem;
-}
-
 .main div h3,
 .summary h3,
 .preamble h3 {
@@ -198,6 +194,10 @@ p {
 .preamble h3 {
     margin-top: 0;
   }
+}
+
+.preamble h3 {
+  margin-top: 0;
 }
 
 .main div p,
@@ -296,6 +296,14 @@ header h2 {
   header h2 {
     font-size: 1.2rem;
   }
+}
+
+.benefits h3 {
+  margin-top: -1rem;
+}
+
+.explanation h3 {
+  margin-top: 0;
 }
 
 @media (min-width: 830px) {
