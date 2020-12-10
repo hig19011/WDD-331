@@ -108,7 +108,7 @@ h3 {}
 
 .main div:nth-child(even),
 .preamble {
-	background-color: rgb(187, 184, 184);
+	background-color: #ebeaea;
 	@include breakpoint(large){
 		background-color: white;
 	}
@@ -161,6 +161,7 @@ header {
 
 header h1 {
 	color: white;
+	text-shadow: 0.5px 0.5px $nearly-black;
 	font-size: 2.2rem;
 	margin: 0;
 	@include breakpoint(large){
