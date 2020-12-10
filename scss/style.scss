@@ -124,12 +124,22 @@ abbr {}
 	}
 }
 
+header {
+	background-image: url("../images/Mountains.svg");
+	background-color: white;
+	@include breakpoint(large){
+		background-image: none;
+		background-color: $blue-green;
+	}
+}
+
 .intro header {
 	font-family: 'Rock Salt', cursive;
-	background-color: $blue-green;
+	background-color: lighten($blue-green, 30%);
 	padding: 1em .5rem;
 	text-align: center;
 	@include breakpoint(large){	
+		background-color: $blue-green;
 		transform: translateX(calc(-#{$sidebar-width} - 1em));
 		width: calc(100vw - 2.1em);
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	

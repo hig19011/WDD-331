@@ -246,14 +246,26 @@ p {
   }
 }
 
+header {
+  background-image: url("../images/Mountains.svg");
+  background-color: white;
+}
+@media (min-width: 700px) {
+  header {
+    background-image: none;
+    background-color: #5d8378;
+  }
+}
+
 .intro header {
   font-family: "Rock Salt", cursive;
-  background-color: #5d8378;
+  background-color: #b1c8c1;
   padding: 1em 0.5rem;
   text-align: center;
 }
 @media (min-width: 700px) {
   .intro header {
+    background-color: #5d8378;
     transform: translateX(calc(-20em - 1em));
     width: calc(100vw - 2.1em);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
