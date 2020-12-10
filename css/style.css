@@ -238,7 +238,7 @@ abbr {
 
 .main div:nth-child(even),
 .preamble {
-  background-color: #ebeaea;
+  background-color: #e1e0e0;
 }
 @media (min-width: 830px) {
   .main div:nth-child(even),

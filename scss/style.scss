@@ -108,7 +108,7 @@ h3 {}
 
 .main div:nth-child(even),
 .preamble {
-	background-color: #ebeaea;
+	background-color: #e1e0e0;
 	@include breakpoint(large){
 		background-color: white;
 	}
