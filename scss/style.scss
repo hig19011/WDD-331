@@ -32,7 +32,6 @@ p {
 
 }
 
-h3 {}
 
 [role=article] a:link {
 	color: #5d8378;
@@ -52,8 +51,6 @@ h3 {}
   }
 
  
-/* specific divs */
-// .main div,
 .summary
  {
 	padding: 1em;
@@ -71,9 +68,6 @@ h3 {}
 	}
 }
 
-// .main div h3{
-// 	margin-top: -1rem;
-// }
 .main div h3,
 .summary h3,
 .preamble h3 {
@@ -82,9 +76,6 @@ h3 {}
 	background-color: $green;
 	padding: 1.5em .5em .5em;
 	@include breakpoint(large){
-		// padding: 1.5em .5em .5em;
-		//margin-block-start: 0;
-		//margin-block-end: 0;
 		margin-top: 0;
 	}	
 }
@@ -116,7 +107,6 @@ h3 {}
 }
 
 .main {
-	// background-color: $whitish;
 	@include breakpoint(large){
 	padding-left: 1em;
 	padding-right: 1em;
@@ -127,7 +117,6 @@ h3 {}
 .requirements p:last-of-type {
 	padding: 1em;
 	font-weight: bold;
-	//background-color: white;
 }
 
 .intro {
@@ -178,14 +167,6 @@ header h2 {
 		font-size: 1.2rem;
 	}
 }
-
-.summary {}
-
-.summary p {}
-
-.preamble {}
-
-.supporting {}
 
 .benefits h3{
 	margin-top: -1rem;
@@ -264,13 +245,7 @@ footer a:last-child{
 		transition: all .3s;
 	}
 	@include breakpoint(large){
-		// position: -webkit-sticky; /* Safari */
-  	// 	position: sticky;
 		top: 0;
-		//Note: not supported by Internet Explorer, Edge 15, and
-		 //earlier versions 
-		 //end of sticky footer
-		// height: 100vh;
 		margin-top: 13em;
 		width: 20em;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -285,19 +260,10 @@ footer a:last-child{
 
 .sidebar h3.select { margin: .5em 0 .5em 0;}
 
-.sidebar h3.archives {}
-
 .sidebar h3.resources { margin: .5em 0 .5em 0;}
 
 
 .sidebar ul { margin: .5em 0 .5em 0}
-
-.sidebar li {}
-
-.sidebar li a:link {}
-
-.sidebar li a:visited {}
-
 
 .design-selection,
 .zen-resources {
@@ -411,8 +377,6 @@ footer a:last-child{
 					text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
 					white-space: nowrap;
 					overflow: hidden;
-					//I think adding some letter spacing makes the words on the sign more accessible/easier to read. 
-					//If you agree the background image just need to be adjuste in size to fit the change
 					letter-spacing: 1.5px;
 
 				}
